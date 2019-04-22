@@ -45,8 +45,9 @@ SimRankはグラフ構造におけるノード間の類似度を求める手法�
 [WIP]
 目的: 機械学習モデルの解釈性を上げること
 
-LACE: K最近傍法によってローカルルールを適用する
-他に有名なブラックボックスモデルのためのLIMEと比較した．
+LACE: K最近傍法によってローカルルールを適用する．ルールベースのアルゴリズム．
+
+他に局所的なものを見るモデルとして有名なLIMEと比較しより良い結果が得られた．
 
 
 ## SONAMA-2: Social Network and Media Analysis
@@ -66,6 +67,15 @@ LACE: K最近傍法によってローカルルールを適用する
 そこで並列分散処理ができるように行列をブロック分割してアルゴリズムを改善した．
 
 ## MLA-3
+### Population Anomaly Detection through Deep Gaussianization
+[WIP]
+Adversarial Autoencoderを用いてエンコーダーの出力となる潜在表現が標準正規分布になるように学習．
+実際にサンプルデータを流してみてみると正規分布になっていることが確認できる．
+
+得られた表現をコルモゴロフ-スミルノフ検定で検定を行う．
+
+使う際はAdversarial Autoencoderで学習済みのDiscriminator (正規分布かどうかの判別器) に流した際の確率地をスコアと見て，異常の度合いとする．
+
 ### (発表) REAL-TIME BOTNET DETECTION USING NONNEGATIVE TUCKER DECOMPOSITION
 #### 質疑応答
 -  何故NTDにしたのか？
